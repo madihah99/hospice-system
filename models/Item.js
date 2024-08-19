@@ -1,17 +1,30 @@
-const Datastore = require("nedb"); // Require NeDB, a lightweight database
-const db = new Datastore({ filename: "./data/items.db", autoload: true }); // Load the database for items from a file.
+const Datastore = require("nedb");
+const path = require("path");
 
-// Function to add a new item to the database.
-exports.addItem = function (item, callback) {
-  db.insert(item, callback); // Inserts a new item into the database and calls back with the result
-};
+const db = new Datastore({
+  filename: path.join(__dirname, "../data/items.db"),
+  autoload: true,
+});
 
-// Function to fetch all items from the database.
-exports.getAllItems = function (callback) {
-  db.find({}, callback); // Retrieves all items in the database and calls back with the results
-};
+function createItem(itemData, callback) {
+  db.insert(itemData, callback);
+}
 
-// Function to remove an item from the database based on its ID.
-exports.removeItem = function (id, callback) {
-  db.remove({ _id: id }, {}, callback); // Removes the item by its _id and calls back with the result
+function getAllItems(callback) {
+  db.find({}, callback);
+}
+
+function updateItem(id, updatedData, callback) {
+  db.update({ _id: id }, { $set: updatedData }, {}, callback);
+}
+
+function deleteItem(id, callback) {
+  db.remove({ _id: id }, {}, callback);
+}
+
+module.exports = {
+  createItem,
+  getAllItems,
+  updateItem,
+  deleteItem,
 };

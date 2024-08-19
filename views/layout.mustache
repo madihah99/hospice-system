@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/css/styles.css"> <!-- Link to the CSS file -->
+
+    <!--Leaflet.js library added to include an interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
     {{> partials/header}}  <!-- Include the header partial view here -->
     <main>
         {{{ content }}}  <!-- Placeholder for the main content of each page -->
     </main>
-    <footer>
-        <div class="footer-container">
-            <p>© 2024 HOSPICE. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>

@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const Datastore = require("nedb");
 const volunteerRoutes = require("./routes/volunteerRoutes");
-
+const managerRoutes = require("./routes/managerRoutes");
 const app = express();
 
 // Set up Mustache as the template engine
@@ -14,6 +14,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Middleware for serving static files
 app.use(express.static(path.join(__dirname, "public")));
+// Middleware for parsing form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set up the database
@@ -25,7 +26,7 @@ const db = new Datastore({
 //Routes
 //Route to render the home page
 app.get("/", (req, res) => {
-  res.render("layout", {
+  res.render("home", {
     title: "Home",
   });
 });
@@ -37,9 +38,17 @@ app.get("/login", (req, res) => {
   });
 });
 
+//Route to render the about page
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About Us",
+  });
+});
+
 // Route for the Volunteer Interest page
-// Use the volunteer routes
 app.use("/", volunteerRoutes);
+// Route for the Manager Dashboard page
+app.use("/", managerRoutes);
 
 // //for testing
 // db.insert(

@@ -1,0 +1,33 @@
+{{> layout}}
+<div class="about-container">
+    <h1>ABOUT US</h1>
+    <p>
+        We are a passionate community-driven organisation dedicated to making a positive difference in the lives of those around us. Our mission is to empower individuals and strengthen communities by providing quality goods and services while using our platform to support charitable initiatives.
+    </p>
+
+    <h2>Visit our stores</h2>
+    <p>
+        With multiple locations across the region, our stores are conveniently situated to serve you. Visit us today and see how you can be part of this incredible mission.
+    </p>
+
+    <div class="store-list">
+        {{#stores}}
+        <div class="store-card">
+            <img src="{{image}}" alt="Store {{number}}">
+            <h3>Shop {{number}}</h3>
+            <p>Address: {{address}}</p>
+            <p>Phone: {{phone}}</p>
+            <p>Opening Hours: {{hours}}</p>
+        </div>
+        {{/stores}}
+    </div>
+
+    <div class="map-container">
+        <h2>Our Locations</h2>
+        <div id="map"></div>
+    </div>
+    
+</div>
+<!-- Link to external JavaScript file -->
+<script src="/js/about.js"></script>
+{{> partials/footer}}
