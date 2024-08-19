@@ -1,0 +1,40 @@
+{{> layout}}
+<div class="items-container">
+    <div class="breadcrumb">
+        <a href="/">Home</a> > Items
+    </div>
+    
+    <h1>Explore Our Items</h1>
+    <p>All the items listed below are located in different stores, looking for a new home.</p>
+
+    <div class="sort-container">
+        <label for="sort">Sort by:</label>
+        <select id="sort" name="sort" onchange="sortItems(this.value)">
+            <option value="all">All</option>
+            <option value="price">Price</option>
+            <option value="store">Store</option>
+        </select>
+    </div>
+
+    <div class="item-list">
+        {{#items}}
+        <div class="item-card">
+            <img src="{{image}}" alt="{{name}}">
+            <h3>{{name}}</h3>
+            <p>{{description}}</p>
+            <p>Store: {{store}}</p>
+            <p>Price: £{{price}}</p>
+            <p>Item ID: {{id}}</p>
+        </div>
+        {{/items}}
+    </div>
+</div>
+
+<script>
+    function sortItems(criteria) {
+        // Sorting logic will be implemented here
+        alert('Sorting by: ' + criteria);
+    }
+</script>
+
+{{> partials/footer}}

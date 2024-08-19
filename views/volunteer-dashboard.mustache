@@ -1,0 +1,71 @@
+{{> layout}}
+<div class="dashboard-container">
+    <h1>Volunteer Dashboard</h1>
+
+    <!-- Form to Add New Item -->
+    <div class="add-item-form">
+        <h2>Add New Item</h2>
+        <form action="/volunteer-dashboard/add-item" method="POST">
+            <div class="form-group">
+                <label for="name">Item Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Item Description</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Item Price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="store">Shop Number</label>
+                <select id="store" name="store">
+                    <option value="Shop 1">Shop 1</option>
+                    <option value="Shop 2">Shop 2</option>
+                    <option value="Shop 3">Shop 3</option>
+                    <option value="Shop 4">Shop 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="Furniture">Furniture</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Decor">Decor</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-add">Add Item</button>
+        </form>
+    </div>
+
+    <!-- Form to Remove Item -->
+    <div class="remove-item-form">
+        <h2>Remove an Item</h2>
+        <form action="/volunteer-dashboard/remove-item" method="POST">
+            <div class="form-group">
+                <label for="itemId">Item ID</label>
+                <input type="text" id="itemId" name="itemId" required>
+            </div>
+            <button type="submit" class="btn btn-remove">Remove Item</button>
+        </form>
+    </div>
+
+    <!-- Display Current Stock Items -->
+    <div class="current-stock">
+        <h2>Current Stock Items</h2>
+        <div class="item-list">
+            {{#items}}
+            <div class="item-card">
+                <img src="{{image}}" alt="{{name}}">
+                <h3>{{name}}</h3>
+                <p>{{description}}</p>
+                <p>Price: £{{price}}</p>
+                <p>Shop: {{store}}</p>
+                <p>Item ID: {{id}}</p>
+            </div>
+            {{/items}}
+        </div>
+    </div>
+</div>

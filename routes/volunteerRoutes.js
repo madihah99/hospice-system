@@ -1,15 +1,24 @@
-// routes/volunteerRoutes.js
-const express = require("express");
-const router = express.Router();
-const volunteerController = require("../controllers/volunteerController.js");
 
-// Route to display the Volunteer Interest form
-router.get("/volunteer-interest", volunteerController.showVolunteerForm);
+// const express = require("express");
+// const router = express.Router();
+// const volunteerDashboardController = require("../controllers/volunteerDashboardController");
 
-// Route to handle form submission
-router.post(
-  "/submit-volunteer-interest",
-  volunteerController.submitVolunteerForm
-);
+// // Route to display the Volunteer Dashboard
+// router.get(
+//   "/volunteer-dashboard",
+//   volunteerDashboardController.showVolunteerDashboard
+// );
 
-module.exports = router;
+// // Route to handle adding a new item
+// router.post(
+//   "/volunteer-dashboard/add-item",
+//   volunteerDashboardController.addItem
+// );
+
+// // Route to handle removing an item
+// router.post(
+//   "/volunteer-dashboard/remove-item",
+//   volunteerDashboardController.removeItem
+// );
+
+// module.exports = router;

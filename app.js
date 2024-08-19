@@ -45,22 +45,30 @@ app.get("/about", (req, res) => {
   });
 });
 
-// Route for the Volunteer Interest page
-app.use("/", volunteerRoutes);
-// Route for the Manager Dashboard page
-app.use("/", managerRoutes);
+//Route to render the about page
+app.get("/items", (req, res) => {
+  res.render("items", {
+    title: "Explore our Items",
+  });
+});
 
-// //for testing
-// db.insert(
-//   { email: "test@example.com", password: "password123" },
-//   (err, newUser) => {
-//     if (err) {
-//       console.log("Error inserting user:", err);
-//     } else {
-//       console.log("New user added:", newUser);
-//     }
-//   }
-// );
+// Route for the Volunteer Interest page
+// app.use("/", volunteerRoutes);
+
+// // Route for the Manager Dashboard page
+// app.use("/", managerRoutes);
+
+// manager user
+db.insert(
+  { email: "manager@hospice.com", password: "Manager!priv1029" },
+  (err, newUser) => {
+    if (err) {
+      console.log("Error inserting user:", err);
+    } else {
+      console.log("Manager User added:", newUser);
+    }
+  }
+);
 
 // Handle login form submission
 app.post("/login", (req, res) => {

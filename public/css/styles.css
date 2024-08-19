@@ -270,7 +270,7 @@ header ul li a:hover {
 }
 
 /*---------------------------------------------------------------------------*/
-
+/*Volunteer interest form page*/
 /* Container for the volunteer interest form - centers the form and styles it */
 .volunteer-interest-container {
   max-width: 600px; /* Maximum width of the form */
@@ -352,6 +352,200 @@ header ul li a:hover {
 }
 
 /*---------------------------------------------------------------------------*/
+
+/*Items page styling*/
+
+/* Container for items page */
+.items-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.items-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.items-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #6c757d;
+}
+
+/* Breadcrumb feature for navigation */
+.breadcrumb {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Sort container */
+.sort-container {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.sort-container select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Item list grid */
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Three items per row with gaps */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.item-card h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #343a40;
+}
+
+.item-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*Volunteer Dashboard Styling*/
+/* General container styling */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #343a40;
+  text-align: center;
+}
+
+.add-item-form,
+.remove-item-form {
+  margin-bottom: 30px;
+}
+
+.add-item-form h2,
+.remove-item-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-remove {
+  background-color: #dc3545;
+  color: white;
+}
+
+.current-stock h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Three items per row with gaps */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.item-card h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #343a40;
+}
+
+.item-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
 
 /* Footer styling */
 .footer {

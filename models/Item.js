@@ -6,25 +6,20 @@ const db = new Datastore({
   autoload: true,
 });
 
-function createItem(itemData, callback) {
-  db.insert(itemData, callback);
-}
-
 function getAllItems(callback) {
   db.find({}, callback);
 }
 
-function updateItem(id, updatedData, callback) {
-  db.update({ _id: id }, { $set: updatedData }, {}, callback);
+function createItem(itemData, callback) {
+  db.insert(itemData, callback);
 }
 
-function deleteItem(id, callback) {
-  db.remove({ _id: id }, {}, callback);
+function deleteItem(itemId, callback) {
+  db.remove({ id: itemId }, {}, callback);
 }
 
 module.exports = {
-  createItem,
   getAllItems,
-  updateItem,
+  createItem,
   deleteItem,
 };
