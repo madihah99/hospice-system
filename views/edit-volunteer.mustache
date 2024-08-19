@@ -1,0 +1,34 @@
+{{> layout}}
+
+<!-- views/edit-volunteer.mustache -->
+<div class="dashboard-container">
+    <h1>Edit Volunteer</h1>
+
+    <form action="/manager-dashboard/edit-volunteer/{{_id}}" method="POST">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" value="{{firstName}}" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value="{{lastName}}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{email}}" required>
+        </div>
+        <div class="form-group">
+            <label for="yearJoined">Year Joined</label>
+            <input type="number" id="yearJoined" name="yearJoined" value="{{yearJoined}}" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" id="image" name="image" value="{{image}}">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="{{password}}" required>
+        </div>
+        <button type="submit" class="btn btn-edit">Save Changes</button>
+    </form>
+</div>

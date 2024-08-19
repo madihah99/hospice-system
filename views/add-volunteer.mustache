@@ -1,0 +1,33 @@
+{{>layout}}
+
+<div class="dashboard-container">
+    <h1>Add Volunteer</h1>
+
+    <form action="/manager-dashboard/add-volunteer" method="POST">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="yearJoined">Year Joined</label>
+            <input type="number" id="yearJoined" name="yearJoined" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" id="image" name="image">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-add">Add Volunteer</button>
+    </form>
+</div>

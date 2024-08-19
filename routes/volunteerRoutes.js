@@ -1,4 +1,4 @@
-
+// // routes/volunteerRoutes.js
 // const express = require("express");
 // const router = express.Router();
 // const volunteerDashboardController = require("../controllers/volunteerDashboardController");
@@ -15,10 +15,23 @@
 //   volunteerDashboardController.addItem
 // );
 
-// // Route to handle removing an item
-// router.post(
-//   "/volunteer-dashboard/remove-item",
-//   volunteerDashboardController.removeItem
-// );
+// module.exports = router;
+
+// routes/volunteerRoutes.js
+// const express = require('express');
+// const router = express.Router();
+// const volunteerDashboardController = require('../controllers/volunteerDashboardController');
+
+// function ensureAuthenticated(req, res, next) {
+//     if (req.session.volunteerId) {
+//         return next();
+//     } else {
+//         res.redirect('/login');
+//     }
+// }
+
+// // Route to display the Volunteer Dashboard, only accessible if logged in
+// router.get('/volunteer-dashboard', ensureAuthenticated, volunteerDashboardController.showVolunteerDashboard);
 
 // module.exports = router;
+// routes/volunteerRoutes.js

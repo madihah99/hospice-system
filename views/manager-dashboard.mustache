@@ -1,0 +1,30 @@
+{{> layout}}
+<div class="dashboard-container">
+    <h1>Manager Dashboard</h1>
+
+    <!-- Add Volunteer and View Forms buttons -->
+    <div class="dashboard-actions">
+        <a href="/add-volunteer" class="btn btn-add">Add Volunteer</a>
+        <a href="/volunteer-submissions" class="btn btn-view-forms">View Forms</a>
+    </div>
+
+    <!-- Current Volunteers List -->
+    <h2>Current Volunteers</h2>
+    <div class="volunteer-list">
+        {{#volunteers}}
+        <div class="volunteer-card">
+            <img src="{{image}}" alt="{{name}}">
+            <div class="volunteer-info">
+                <h3>{{firstName}} {{lastName}}</h3>
+                <p>Volunteer since {{yearJoined}}</p>
+                <p>Email: {{email}}</p>
+                <a href="/edit-volunteer/{{_id}}" class="btn btn-edit">Edit Volunteer</a>
+                <form action="remove-volunteer" method="POST" style="display:inline;">
+                    <input type="hidden" name="volunteerId" value="{{_id}}">
+                    <button type="submit" class="btn btn-remove">Remove Volunteer</button>
+                </form>
+            </div>
+        </div>
+        {{/volunteers}}
+    </div>
+</div>

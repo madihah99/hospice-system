@@ -2,7 +2,7 @@ const Datastore = require("nedb");
 const path = require("path");
 
 const db = new Datastore({
-  filename: path.join(__dirname, "../data/volunteer-interests.db"),
+  filename: path.join(__dirname, "../data/volunteer-interest.db"),
   autoload: true,
 });
 

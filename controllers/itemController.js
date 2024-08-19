@@ -1,4 +1,4 @@
-const Item = require("../models/item");
+const Item = require("../models/Item");
 
 // Function to render the Items page
 function showItemsPage(req, res) {

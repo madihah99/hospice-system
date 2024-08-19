@@ -52,11 +52,29 @@ app.get("/items", (req, res) => {
   });
 });
 
-// Route for the Volunteer Interest page
-// app.use("/", volunteerRoutes);
+app.get("/volunteer-interest", (req, res) => {
+  res.render("volunteer-interest", {
+    title: "Volunteer Interest",
+  });
+});
 
-// // Route for the Manager Dashboard page
-// app.use("/", managerRoutes);
+app.get("/volunteer-dashboard", (req, res) => {
+  res.render("volunteer-dashboard", {
+    title: "Volunteer Dashboard",
+  });
+});
+
+app.get("/manager-dashboard", (req, res) => {
+  res.render("manager-dashboard", {
+    title: "Manager Dashboard",
+  });
+});
+
+app.get("/add-volunteer", (req, res) => {
+  res.render("add-volunteer", {
+    title: "Add a Volunteer",
+  });
+});
 
 // manager user
 db.insert(
