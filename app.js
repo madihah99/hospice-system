@@ -110,7 +110,7 @@ app.post("/login", (req, res) => {
     // Check if the password matches
     if (user.password === password) {
       // Password matches, log the user in (this could set a session, etc.)
-      res.redirect("/dashboard"); // Redirect to a dashboard or another page
+      res.redirect("/manager-dashboard"); // Redirect to a dashboard or another page
     } else {
       // Password does not match
       res.render("login", {

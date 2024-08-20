@@ -22,3 +22,18 @@
 
 // module.exports = router;
 
+
+// login 
+//manager dash 
+// volunteer dash 
+//normal  
+
+// 2 priorites
+
+// const user = () =>{
+//     "name",
+//     "email",
+//     "passwords(encrypted 1 way fn)"
+//     "priority"
+
+// }
